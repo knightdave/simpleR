@@ -1,0 +1,21 @@
+load("@com_grail_rules_r//R:defs.bzl", "r_pkg")
+
+PKG_NAME = "simpleR"
+
+
+PKG_SRCS = glob(
+    ["**"],
+    exclude = [
+        "BUILD",
+        "BUILD.bazel",
+        "bazel-out/**",
+        "bazel-bin/**",
+        "bazel-testlogs/**",
+        "bazel-simpleR/**"
+    ],
+)
+
+r_pkg(
+    name = PKG_NAME,
+    srcs = PKG_SRCS
+)
