@@ -11,7 +11,9 @@ PKG_SRCS = glob(
         "bazel-out/**",
         "bazel-bin/**",
         "bazel-testlogs/**",
-        "bazel-simpleR/**"
+        "bazel-simpleR/**",
+	".git",
+	"WORKSPACE"
     ],
 )
 
